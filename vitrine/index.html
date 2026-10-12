@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vendorax Digital</title>
-  <link rel="canonical" href="https://vendoraxdigital.com/fr/">
+  <link rel="canonical" href="https://vendoraxdigital.com/">
   <link rel="alternate" hreflang="fr" href="https://vendoraxdigital.com/fr/">
   <link rel="alternate" hreflang="en" href="https://vendoraxdigital.com/en/">
   <link rel="alternate" hreflang="de" href="https://vendoraxdigital.com/de/">
@@ -15,9 +15,23 @@
   <link rel="alternate" hreflang="nl" href="https://vendoraxdigital.com/nl/">
   <link rel="alternate" hreflang="es" href="https://vendoraxdigital.com/es/">
   <link rel="alternate" hreflang="x-default" href="https://vendoraxdigital.com/en/">
-  <meta http-equiv="refresh" content="0; url=fr/">
+  <script>
+    (function () {
+      var supported = ["fr", "en", "de", "pl", "sv", "it", "pt", "nl", "es"];
+      var saved = document.cookie.match(/(?:^|; )vxlang=([a-z]{2})/);
+      var lang = saved && supported.indexOf(saved[1]) !== -1 ? saved[1] : "";
+      if (!lang) {
+        var prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"];
+        for (var i = 0; i < prefs.length; i++) {
+          var code = String(prefs[i]).toLowerCase().slice(0, 2);
+          if (supported.indexOf(code) !== -1) { lang = code; break; }
+        }
+      }
+      location.replace((lang || "en") + "/");
+    })();
+  </script>
 </head>
 <body>
-  <p><a href="fr/">Vendorax Digital</a></p>
+  <p><a href="en/">Vendorax Digital</a></p>
 </body>
 </html>

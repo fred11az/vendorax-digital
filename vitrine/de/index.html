@@ -985,7 +985,11 @@
   <script>
 
     const lang = document.getElementById("lang");
-    if (lang) lang.addEventListener("change", () => { window.location.href = lang.value; });
+    if (lang) lang.addEventListener("change", () => {
+      const code = (lang.selectedOptions[0] && lang.selectedOptions[0].lang) || "en";
+      document.cookie = "vxlang=" + code + ";path=/;max-age=31536000;SameSite=Lax";
+      window.location.href = lang.value;
+    });
     const header = document.querySelector(".site-header");
     const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 12);
     onScroll();
