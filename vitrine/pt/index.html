@@ -70,6 +70,7 @@
       z-index: 20;
     }
     .skip:focus { top: 0.6rem; }
+    .sr-only { position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0); }
 
     .wrap {
       width: min(1180px, calc(100% - 2.5rem));
@@ -122,19 +123,23 @@
       letter-spacing: 0.02em;
     }
     .nav a:hover { color: var(--verm); }
-    .langs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem 0.55rem;
-      margin-left: 0.4rem;
+    .lang-select select {
+      appearance: none;
+      color: inherit;
+      background-color: transparent;
+      border: 1px solid currentColor;
+      font: inherit;
+      font-size: 0.85rem;
+      padding: 0.45rem 1.7rem 0.45rem 0.6rem;
+      background-image:
+        linear-gradient(45deg, transparent 50%, currentColor 50%),
+        linear-gradient(135deg, currentColor 50%, transparent 50%);
+      background-position: calc(100% - 14px) 55%, calc(100% - 8px) 55%;
+      background-size: 6px 6px, 6px 6px;
+      background-repeat: no-repeat;
+      cursor: pointer;
     }
-    .langs a {
-      text-decoration: none;
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      opacity: 0.62;
-    }
-    .langs a[aria-current="page"] { opacity: 1; color: var(--verm); }
+    .lang-select select option { color: #101826; background: #eef3f8; }
     .header-cta {
       text-decoration: none;
       background: var(--verm);
@@ -143,7 +148,7 @@
       font-size: 0.88rem;
       font-weight: 560;
     }
-    .header-cta:hover { background: #c43222; }
+    .header-cta:hover { background: #1456d6; }
     .menu-btn {
       display: none;
       background: transparent;
@@ -610,7 +615,7 @@
       align-items: start;
     }
     footer .wordmark { color: var(--bone); margin: 0 0 0.5rem; }
-    footer p { margin: 0; color: #ddd4c6; max-width: 32rem; }
+    footer p { margin: 0; color: #d5deea; max-width: 32rem; }
     footer nav { display: flex; flex-direction: column; gap: 0.35rem; }
     footer a { text-decoration: none; }
     footer a:hover { color: var(--brass); }
@@ -696,18 +701,21 @@
         <a href="#canaux">Canais</a>
         <a href="#methode">Método</a>
         <a href="#contact">Contacto</a>
-        <span class="langs" aria-label="Língua">
-          <a href="../fr/" hreflang="fr" lang="fr">FR</a>
-          <a href="../en/" hreflang="en" lang="en">EN</a>
-          <a href="../de/" hreflang="de" lang="de">DE</a>
-          <a href="../pl/" hreflang="pl" lang="pl">PL</a>
-          <a href="../sv/" hreflang="sv" lang="sv">SV</a>
-          <a href="../it/" hreflang="it" lang="it">IT</a>
-          <a href="../pt/" hreflang="pt" lang="pt" aria-current="page">PT</a>
-          <a href="../nl/" hreflang="nl" lang="nl">NL</a>
-          <a href="../es/" hreflang="es" lang="es">ES</a>
-        </span>
-      </nav>
+        </nav>
+      <label class="lang-select">
+          <span class="sr-only">Língua</span>
+          <select id="lang" aria-label="Língua">
+          <option value="../fr/" lang="fr">🇫🇷 Français</option>
+          <option value="../en/" lang="en">🇬🇧 English</option>
+          <option value="../de/" lang="de">🇩🇪 Deutsch</option>
+          <option value="../pl/" lang="pl">🇵🇱 Polski</option>
+          <option value="../sv/" lang="sv">🇸🇪 Svenska</option>
+          <option value="../it/" lang="it">🇮🇹 Italiano</option>
+          <option value="../pt/" lang="pt" selected>🇵🇹 Português</option>
+          <option value="../nl/" lang="nl">🇳🇱 Nederlands</option>
+          <option value="../es/" lang="es">🇪🇸 Español</option>
+          </select>
+        </label>
       <a class="header-cta" href="#contact">Falar de um projeto</a>
     </div>
   </header>
@@ -975,6 +983,9 @@
   </footer>
 
   <script>
+
+    const lang = document.getElementById("lang");
+    if (lang) lang.addEventListener("change", () => { window.location.href = lang.value; });
     const header = document.querySelector(".site-header");
     const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 12);
     onScroll();
