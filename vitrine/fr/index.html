@@ -402,7 +402,7 @@
 
     .service {
       display: grid;
-      grid-template-columns: 5.5rem 1.1fr 0.9fr;
+      grid-template-columns: 4.5rem minmax(0, 1fr) 260px;
       gap: 1.5rem;
       padding: 1.8rem 0;
       border-top: 1px solid var(--line);
@@ -431,6 +431,9 @@
     }
     .service:hover .num,
     .service:focus-within .num { color: var(--verm); }
+
+    .service-photo { margin: 0; grid-column: 3; grid-row: 1 / span 2; }
+    .service-photo img { width: 100%; height: 100%; min-height: 190px; object-fit: cover; }
     .service h3 {
       margin: 0 0 0.55rem;
       font-family: "Fraunces", serif;
@@ -651,6 +654,10 @@
         color: var(--bone);
       }
       .menu-btn { display: inline-block; }
+
+      .service { grid-template-columns: 3rem 1fr; }
+      .service-photo { grid-column: 1 / -1; grid-row: auto; }
+      .service-photo img { height: 210px; min-height: 0; }
       .hero { grid-template-columns: 1fr; }
       .rail {
         flex-direction: row;
@@ -812,6 +819,7 @@
             <li>Boutique en ligne</li>
             <li>Pages qui convertissent</li>
           </ul>
+          <figure class="service-photo"><img src="../assets/web.jpg" alt="Un ordinateur ouvert sur une boutique en ligne, à côté d’un téléphone qui montre le produit." width="1200" height="900"></figure>
         </article>
 
         <article class="service" id="communaute">
@@ -825,6 +833,7 @@
             <li>Réponses aux messages</li>
             <li>Ton de marque, tenu dans la durée</li>
           </ul>
+          <figure class="service-photo"><img src="../assets/communaute.jpg" alt="Une main répond aux messages de clients sur un téléphone." width="1200" height="900"></figure>
         </article>
 
         <article class="service" id="partenaires">
@@ -838,6 +847,7 @@
             <li>Dossiers de présentation</li>
             <li>Premiers échanges hors du marché local</li>
           </ul>
+          <figure class="service-photo"><img src="../assets/partenaires.jpg" alt="Deux personnes d’affaires se serrent la main autour d’une carte de l’Europe." width="1200" height="900"></figure>
         </article>
 
         <article class="service" id="publicite">
@@ -851,6 +861,7 @@
             <li>Audience élargie, puis ramenée au site</li>
             <li>Suivi du coût, des clics et des ventes</li>
           </ul>
+          <figure class="service-photo"><img src="../assets/publicite.jpg" alt="Un téléphone diffuse une vidéo produit, devant un écran de recherche sponsorisée." width="1200" height="900"></figure>
         </article>
       </div>
     </section>

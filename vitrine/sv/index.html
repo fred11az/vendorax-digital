@@ -402,7 +402,7 @@
 
     .service {
       display: grid;
-      grid-template-columns: 5.5rem 1.1fr 0.9fr;
+      grid-template-columns: 4.5rem minmax(0, 1fr) 260px;
       gap: 1.5rem;
       padding: 1.8rem 0;
       border-top: 1px solid var(--line);
@@ -431,6 +431,9 @@
     }
     .service:hover .num,
     .service:focus-within .num { color: var(--verm); }
+
+    .service-photo { margin: 0; grid-column: 3; grid-row: 1 / span 2; }
+    .service-photo img { width: 100%; height: 100%; min-height: 190px; object-fit: cover; }
     .service h3 {
       margin: 0 0 0.55rem;
       font-family: "Fraunces", serif;
@@ -651,6 +654,10 @@
         color: var(--bone);
       }
       .menu-btn { display: inline-block; }
+
+      .service { grid-template-columns: 3rem 1fr; }
+      .service-photo { grid-column: 1 / -1; grid-row: auto; }
+      .service-photo img { height: 210px; min-height: 0; }
       .hero { grid-template-columns: 1fr; }
       .rail {
         flex-direction: row;
@@ -812,6 +819,7 @@
             <li>Webbutik</li>
             <li>Sidor som konverterar</li>
           </ul>
+          <figure class="service-photo"><img src="../assets/web.jpg" alt="En laptop med en nätbutik, bredvid en telefon som visar produkten." width="1200" height="900"></figure>
         </article>
 
         <article class="service" id="communaute">
@@ -825,6 +833,7 @@
             <li>Svar på meddelanden</li>
             <li>Varumärkets ton, hållen över tid</li>
           </ul>
+          <figure class="service-photo"><img src="../assets/communaute.jpg" alt="En hand svarar på kundmeddelanden i en telefon." width="1200" height="900"></figure>
         </article>
 
         <article class="service" id="partenaires">
@@ -838,6 +847,7 @@
             <li>Presentationsunderlag</li>
             <li>Första samtal utanför den lokala marknaden</li>
           </ul>
+          <figure class="service-photo"><img src="../assets/partenaires.jpg" alt="Två affärspersoner skakar hand över en karta av Europa." width="1200" height="900"></figure>
         </article>
 
         <article class="service" id="publicite">
@@ -851,6 +861,7 @@
             <li>Bredare publik, sedan tillbaka till webbplatsen</li>
             <li>Uppföljning av kostnad, klick och försäljning</li>
           </ul>
+          <figure class="service-photo"><img src="../assets/publicite.jpg" alt="En telefon spelar en produktvideo, framför en skärm med sponsrad sökning." width="1200" height="900"></figure>
         </article>
       </div>
     </section>
