@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vendorax Digital | Développement Web &amp; Expansion Commerciale Europe</title>
+  <meta name="description" content="Développez votre site web, boostez votre visibilité sur TikTok &amp; Google et trouvez des partenaires commerciaux en Europe.">
+  <link rel="canonical" href="https://vendoraxdigital.com/fr/">
+  <link rel="alternate" hreflang="fr" href="https://vendoraxdigital.com/fr/">
+  <link rel="alternate" hreflang="en" href="https://vendoraxdigital.com/en/">
+  <link rel="alternate" hreflang="de" href="https://vendoraxdigital.com/de/">
+  <link rel="alternate" hreflang="pl" href="https://vendoraxdigital.com/pl/">
+  <link rel="alternate" hreflang="sv" href="https://vendoraxdigital.com/sv/">
+  <link rel="alternate" hreflang="it" href="https://vendoraxdigital.com/it/">
+  <link rel="alternate" hreflang="pt" href="https://vendoraxdigital.com/pt/">
+  <link rel="alternate" hreflang="nl" href="https://vendoraxdigital.com/nl/">
+  <link rel="alternate" hreflang="es" href="https://vendoraxdigital.com/es/">
+  <link rel="alternate" hreflang="x-default" href="https://vendoraxdigital.com/en/">
+  <meta property="og:title" content="Vendorax Digital | Développement Web &amp; Expansion Commerciale Europe">
+  <meta property="og:description" content="Développez votre site web, boostez votre visibilité sur TikTok &amp; Google et trouvez des partenaires commerciaux en Europe.">
+  <meta property="og:url" content="https://vendoraxdigital.com/fr/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="icon" href="../assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,640;9..144,720&family=Outfit:wght@360;460;560;650&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bone: #f4efe6;
+      --bone-2: #ebe4d6;
+      --ink: #14110e;
+      --ink-2: #241f1a;
+      --verm: #e23d2b;
+      --brass: #c6a15b;
+      --brass-dim: #8d7340;
+      --text: #1a1612;
+      --muted: #4e463c;
+      --line: rgba(20, 17, 14, 0.16);
+      --line-light: rgba(244, 239, 230, 0.18);
+      --header: 5.25rem;
+      --rail: 5.5rem;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bone);
+      color: var(--text);
+      font-family: "Outfit", sans-serif;
+      font-weight: 460;
+      font-size: 1.05rem;
+      line-height: 1.55;
+      text-rendering: optimizeLegibility;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    :focus-visible {
+      outline: 2px solid var(--verm);
+      outline-offset: 3px;
+    }
+    .skip {
+      position: absolute;
+      left: 1rem;
+      top: -4rem;
+      background: var(--verm);
+      color: var(--bone);
+      padding: 0.6rem 0.9rem;
+      z-index: 20;
+    }
+    .skip:focus { top: 0.6rem; }
+
+    .wrap {
+      width: min(1180px, calc(100% - 2.5rem));
+      margin-inline: auto;
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      height: var(--header);
+      display: flex;
+      align-items: center;
+      background: var(--ink);
+      color: var(--bone);
+      border-bottom: 1px solid transparent;
+      transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+    .site-header.is-scrolled {
+      background: var(--bone);
+      color: var(--ink);
+      border-bottom-color: var(--ink);
+    }
+    .site-header .wrap {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      width: min(1280px, calc(100% - 2rem));
+    }
+    .wordmark {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+      text-decoration: none;
+      line-height: 0;
+    }
+    .wordmark img {
+      height: 3.15rem;
+      width: auto;
+      display: block;
+    }
+    .nav {
+      display: flex;
+      gap: 1.35rem;
+    }
+    .nav a {
+      text-decoration: none;
+      font-size: 0.92rem;
+      letter-spacing: 0.02em;
+    }
+    .nav a:hover { color: var(--verm); }
+    .langs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.55rem;
+      margin-left: 0.4rem;
+    }
+    .langs a {
+      text-decoration: none;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      opacity: 0.62;
+    }
+    .langs a[aria-current="page"] { opacity: 1; color: var(--verm); }
+    .header-cta {
+      text-decoration: none;
+      background: var(--verm);
+      color: var(--bone);
+      padding: 0.55rem 0.85rem;
+      font-size: 0.88rem;
+      font-weight: 560;
+    }
+    .header-cta:hover { background: #c43222; }
+    .menu-btn {
+      display: none;
+      background: transparent;
+      color: inherit;
+      border: 1px solid currentColor;
+      padding: 0.4rem 0.65rem;
+      font: inherit;
+      font-size: 0.85rem;
+    }
+
+    /* Hero */
+    .hero {
+      background: var(--ink);
+      color: var(--bone);
+      display: grid;
+      grid-template-columns: var(--rail) 1fr;
+      min-height: calc(100vh - var(--header));
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(244, 239, 230, 0.04) 0.6px, transparent 0.6px);
+      background-size: 3px 3px;
+      pointer-events: none;
+    }
+    .rail {
+      border-right: 6px solid var(--verm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.4rem 0 1.6rem;
+      position: relative;
+      z-index: 1;
+    }
+    .rail a {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      text-decoration: none;
+      color: var(--brass);
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 0.4rem 0;
+    }
+    .rail a:hover { color: var(--bone); }
+    .hero-main {
+      position: relative;
+      z-index: 1;
+      padding: 2.2rem 2.4rem 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+      gap: 1.5rem 2rem;
+      align-items: end;
+    }
+    .eyebrow {
+      margin: 0 0 1rem;
+      color: var(--brass);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 560;
+    }
+    h1 {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      font-weight: 640;
+      font-optical-sizing: auto;
+      font-size: clamp(3.1rem, 6.4vw, 6.15rem);
+      line-height: 0.88;
+      letter-spacing: -0.035em;
+      max-width: 9.2ch;
+    }
+    .lede {
+      margin: 1.25rem 0 0;
+      max-width: 38rem;
+      color: #e7e0d4;
+      font-size: 1.05rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      align-items: center;
+      margin-top: 1.6rem;
+    }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--verm);
+      color: var(--bone);
+      padding: 0.85rem 1.1rem;
+      font-weight: 560;
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 560;
+    }
+    .btn:hover { background: #c43222; }
+    .btn-ghost {
+      background: transparent;
+      color: var(--bone);
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--brass);
+    }
+    .btn-ghost:hover { color: var(--brass); }
+    .hero-photo {
+      margin: 0;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .hero-photo img {
+      width: 100%;
+      height: min(46vh, 420px);
+      object-fit: cover;
+      border: 1px solid rgba(198, 161, 91, 0.55);
+    }
+    .hero-photo figcaption {
+      margin-top: 0.55rem;
+      color: var(--brass);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .volume-block,
+    .ticker {
+      grid-column: 1 / -1;
+    }
+    .volume-block { margin-top: 0.4rem; }
+    .volume {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      font-weight: 720;
+      font-size: clamp(4.2rem, 12vw, 10.5rem);
+      line-height: 0.78;
+      letter-spacing: -0.045em;
+      color: var(--bone);
+    }
+    .volume span {
+      color: var(--verm);
+    }
+    .ticker {
+      margin: 0.9rem -2.4rem 0;
+      border-top: 1px solid var(--line-light);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      min-height: 3.1rem;
+    }
+    .ticker-label {
+      flex: 0 0 auto;
+      padding: 0 1rem 0 2.4rem;
+      color: var(--brass);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border-right: 1px solid var(--line-light);
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+    }
+    .ticker-window { overflow: hidden; flex: 1; }
+    .ticker-track {
+      display: flex;
+      gap: 2.2rem;
+      width: max-content;
+      animation: marquee 38s linear infinite;
+      padding-left: 1.4rem;
+    }
+    .ticker-track span {
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+      color: #efe8dc;
+      white-space: nowrap;
+    }
+    .ticker-track span::before {
+      content: "";
+      display: inline-block;
+      width: 0.4rem;
+      height: 0.4rem;
+      background: var(--verm);
+      margin-right: 0.7rem;
+      transform: translateY(-1px);
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* Proof */
+    .proof {
+      border-bottom: 1px solid var(--ink);
+    }
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .proof article {
+      padding: 1.4rem 1.2rem 1.5rem 0;
+      border-right: 1px solid var(--line);
+    }
+    .proof article:last-child { border-right: 0; padding-right: 0; }
+    .proof .k {
+      display: block;
+      color: var(--brass-dim);
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      margin-bottom: 0.55rem;
+    }
+    .proof p {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      font-weight: 520;
+      font-size: 1.28rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .proof-note {
+      margin: 0;
+      padding-bottom: 1rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* Sections */
+    section { padding: 4.5rem 0; }
+    .sec-kicker {
+      margin: 0 0 0.4rem;
+      color: var(--brass-dim);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 560;
+    }
+    h2 {
+      margin: 0 0 2rem;
+      font-family: "Fraunces", serif;
+      font-weight: 640;
+      font-size: clamp(2.4rem, 4.5vw, 4rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      max-width: 14ch;
+    }
+
+    .service {
+      display: grid;
+      grid-template-columns: 5.5rem 1.1fr 0.9fr;
+      gap: 1.5rem;
+      padding: 1.8rem 0;
+      border-top: 1px solid var(--line);
+      position: relative;
+    }
+    .service:last-of-type { border-bottom: 1px solid var(--line); }
+    .service::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      height: 2px;
+      width: 100%;
+      background: var(--verm);
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.45s ease;
+    }
+    .service:hover::after,
+    .service:focus-within::after { transform: scaleX(1); }
+    .service .num {
+      font-family: "Fraunces", serif;
+      font-size: 1.8rem;
+      color: var(--brass-dim);
+      transition: color 0.3s ease;
+    }
+    .service:hover .num,
+    .service:focus-within .num { color: var(--verm); }
+    .service h3 {
+      margin: 0 0 0.55rem;
+      font-family: "Fraunces", serif;
+      font-weight: 640;
+      font-size: clamp(1.7rem, 2.4vw, 2.3rem);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .service p { margin: 0; max-width: 38rem; color: var(--text); }
+    .deliverables {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      align-self: end;
+    }
+    .deliverables li {
+      padding: 0.45rem 0;
+      border-top: 1px solid var(--line);
+      font-size: 0.95rem;
+    }
+    .deliverables li::before {
+      content: "— ";
+      color: var(--verm);
+    }
+
+    /* Channels */
+    .channels {
+      background: var(--ink);
+      color: var(--bone);
+      padding: 4.5rem 0 0;
+    }
+    .channels h2 { max-width: 16ch; }
+    .channels .sec-kicker { color: var(--brass); }
+    .board {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: min(1180px, calc(100% - 2.5rem));
+      margin-inline: auto;
+      border: 1px solid rgba(198, 161, 91, 0.45);
+      border-bottom: 0;
+    }
+    .panel {
+      padding: 2rem 1.8rem 2.2rem;
+      border-bottom: 1px solid rgba(198, 161, 91, 0.35);
+      border-right: 1px solid rgba(198, 161, 91, 0.35);
+      min-height: 15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .panel:nth-child(2n) { border-right: 0; }
+    .panel .ch {
+      margin: 0;
+      color: var(--brass);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+    }
+    .panel h3 {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      font-weight: 640;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      letter-spacing: -0.03em;
+      line-height: 0.95;
+    }
+    .panel p { margin: auto 0 0; max-width: 36rem; color: #ebe4d6; }
+    .board-close {
+      margin: 0;
+      padding: 1.3rem 0 1.5rem;
+      border-top: 6px solid var(--verm);
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.35rem, 2vw, 1.8rem);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      max-width: 40rem;
+    }
+
+    /* Method */
+    .method-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    .method-photo {
+      margin: 0;
+      position: sticky;
+      top: calc(var(--header) + 1.2rem);
+    }
+    .method-photo img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      filter: saturate(0.92);
+    }
+    .method-photo figcaption {
+      margin-top: 0.55rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: 4.2rem 1fr;
+      gap: 0.6rem 1rem;
+      padding: 1.25rem 0;
+      border-top: 1px solid var(--line);
+    }
+    .step:last-child { border-bottom: 1px solid var(--line); }
+    .step .num {
+      font-family: "Fraunces", serif;
+      font-size: 1.5rem;
+      color: var(--verm);
+    }
+    .step h3 {
+      margin: 0 0 0.3rem;
+      font-family: "Fraunces", serif;
+      font-size: 1.55rem;
+      letter-spacing: -0.02em;
+    }
+    .step p { margin: 0; color: var(--text); }
+
+    /* Contact */
+    .contact {
+      background: var(--bone-2);
+      border-top: 1px solid var(--ink);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    form {
+      display: grid;
+      gap: 0.9rem;
+    }
+    label {
+      display: grid;
+      gap: 0.3rem;
+      font-size: 0.88rem;
+      font-weight: 560;
+    }
+    input, textarea {
+      font: inherit;
+      color: var(--ink);
+      background: var(--bone);
+      border: 1px solid var(--ink);
+      padding: 0.7rem 0.75rem;
+      border-radius: 0;
+      width: 100%;
+    }
+    textarea { min-height: 8rem; resize: vertical; }
+    input:focus-visible, textarea:focus-visible { outline-offset: 0; }
+    .field-error {
+      color: var(--verm);
+      font-size: 0.82rem;
+      font-weight: 460;
+      min-height: 1em;
+    }
+    .form-note { margin: 0.2rem 0 0; color: var(--muted); font-size: 0.92rem; }
+    .confirm {
+      display: none;
+      border: 1px solid var(--ink);
+      padding: 1.5rem;
+      background: var(--bone);
+    }
+    .confirm.is-on { display: block; }
+    .confirm h3 {
+      margin: 0 0 0.4rem;
+      font-family: "Fraunces", serif;
+      font-size: 1.8rem;
+    }
+    form.is-hidden { display: none; }
+
+    footer {
+      background: var(--ink);
+      color: var(--bone);
+      padding: 2.2rem 0 2.4rem;
+    }
+    .foot {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr auto;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    footer .wordmark { color: var(--bone); margin: 0 0 0.5rem; }
+    footer p { margin: 0; color: #ddd4c6; max-width: 32rem; }
+    footer nav { display: flex; flex-direction: column; gap: 0.35rem; }
+    footer a { text-decoration: none; }
+    footer a:hover { color: var(--brass); }
+    .foot-meta {
+      text-align: right;
+      color: var(--brass);
+      font-size: 0.9rem;
+    }
+    .foot-meta a { color: var(--bone); }
+
+    @media (max-width: 900px) {
+      .nav { display: none; }
+      .header-cta { padding: 0.45rem 0.6rem; font-size: 0.8rem; }
+      .site-header.is-open .nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: var(--header);
+        left: 0;
+        right: 0;
+        background: var(--bone);
+        color: var(--ink);
+        padding: 1rem 1.25rem 1.2rem;
+        border-bottom: 1px solid var(--ink);
+        gap: 0.8rem;
+      }
+      .site-header.is-open {
+        background: var(--bone);
+        color: var(--ink);
+      }
+      .menu-btn { display: inline-block; }
+      .hero { grid-template-columns: 1fr; }
+      .rail {
+        flex-direction: row;
+        border-right: 0;
+        border-bottom: 6px solid var(--verm);
+        padding: 0.7rem 1rem;
+        gap: 1rem;
+        overflow-x: auto;
+      }
+      .rail a {
+        writing-mode: horizontal-tb;
+        transform: none;
+        white-space: nowrap;
+      }
+      .hero-main {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.15rem 0;
+      }
+      h1 { max-width: none; }
+      .hero-photo img { height: 240px; }
+      .ticker { margin-left: -1.15rem; margin-right: -1.15rem; }
+      .ticker-label { padding-left: 1.15rem; }
+      .proof-grid { grid-template-columns: 1fr 1fr; }
+      .proof article:nth-child(2) { border-right: 0; }
+      .proof article { padding-right: 0.8rem; }
+      .service, .method-grid, .contact-grid, .foot {
+        grid-template-columns: 1fr;
+      }
+      .method-photo { position: static; }
+      .panel:nth-child(2n) { border-right: 1px solid rgba(198, 161, 91, 0.35); }
+      .board { grid-template-columns: 1fr; }
+      .panel { border-right: 0; }
+      .foot-meta { text-align: left; }
+      section { padding: 3.2rem 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .ticker-track { animation: none; flex-wrap: wrap; width: auto; padding: 0.7rem 1rem; }
+      .service::after { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="#contenu"><img src="../assets/logo.png" alt="Vendorax Digital"></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav class="nav" id="nav" aria-label="Sections">
+        <a href="#offre">Offre</a>
+        <a href="#canaux">Canaux</a>
+        <a href="#methode">Méthode</a>
+        <a href="#contact">Contact</a>
+        <span class="langs" aria-label="Langue">
+          <a href="../fr/" hreflang="fr" lang="fr" aria-current="page">FR</a>
+          <a href="../en/" hreflang="en" lang="en">EN</a>
+          <a href="../de/" hreflang="de" lang="de">DE</a>
+          <a href="../pl/" hreflang="pl" lang="pl">PL</a>
+          <a href="../sv/" hreflang="sv" lang="sv">SV</a>
+          <a href="../it/" hreflang="it" lang="it">IT</a>
+          <a href="../pt/" hreflang="pt" lang="pt">PT</a>
+          <a href="../nl/" hreflang="nl" lang="nl">NL</a>
+          <a href="../es/" hreflang="es" lang="es">ES</a>
+        </span>
+      </nav>
+      <a class="header-cta" href="#contact">Parler d’un projet</a>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero" aria-labelledby="hero-title">
+      <nav class="rail" aria-label="Index de l’offre">
+        <a href="#web">01 Web</a>
+        <a href="#communaute">02 Communauté</a>
+        <a href="#partenaires">03 Partenaires</a>
+        <a href="#publicite">04 Publicité</a>
+      </nav>
+      <div class="hero-main">
+        <div>
+          <p class="eyebrow">Studio de croissance commerciale</p>
+          <h1 id="hero-title">On fait venir le monde. Ensuite, on le fait acheter.</h1>
+          <p class="lede">Développement web, community management, partenaires internationaux, et publicité sur Facebook, TikTok, Instagram et Google Ads — pour qu’un commerce soit vu par plus de gens, puis choisi.</p>
+          <div class="actions">
+            <a class="btn" href="#contact">Demander un diagnostic</a>
+            <a class="btn-ghost" href="#offre">Voir l’offre</a>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="../assets/hero.jpg" alt="Table de travail vue du dessus : plans imprimés, ordinateur ouvert sur une boutique, téléphone avec un fil de publications." width="1280" height="720">
+          <figcaption>Atelier — plans, boutique, fils sociaux</figcaption>
+        </figure>
+        <div class="volume-block">
+          <p class="volume"><span>+</span> volume de vente</p>
+        </div>
+        <div class="ticker" aria-hidden="true">
+          <div class="ticker-label">En cours</div>
+          <div class="ticker-window">
+            <div class="ticker-track">
+              <span>Facebook — notoriété locale</span>
+              <span>TikTok — découverte produit</span>
+              <span>Instagram — désir et retour boutique</span>
+              <span>Google Ads — requêtes d’achat</span>
+              <span>Relance vitrine</span>
+              <span>Ouverture partenaires</span>
+              <span>Facebook — notoriété locale</span>
+              <span>TikTok — découverte produit</span>
+              <span>Instagram — désir et retour boutique</span>
+              <span>Google Ads — requêtes d’achat</span>
+              <span>Relance vitrine</span>
+              <span>Ouverture partenaires</span>
+            </div>
+          </div>
+        </div>
+        <p class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">File des campagnes : Facebook, TikTok, Instagram, Google Ads.</p>
+      </div>
+    </section>
+
+    <div class="proof">
+      <div class="wrap">
+        <div class="proof-grid">
+          <article>
+            <span class="k">01 — Engagement</span>
+            <p>Des sites livrés pour vendre, pas seulement pour être regardés.</p>
+          </article>
+          <article>
+            <span class="k">02 — Engagement</span>
+            <p>Des communautés tenues : calendrier, réponses, ton stable.</p>
+          </article>
+          <article>
+            <span class="k">03 — Engagement</span>
+            <p>Des marchés ouverts hors du cercle local, par des mises en relation réelles.</p>
+          </article>
+          <article>
+            <span class="k">04 — Engagement</span>
+            <p>Des campagnes pilotées au coût, au clic et à la vente.</p>
+          </article>
+        </div>
+        <p class="proof-note">Engagements de travail du studio. Pas des résultats mesurés chez un client nommé.</p>
+      </div>
+    </div>
+
+    <section id="offre">
+      <div class="wrap">
+        <p class="sec-kicker">Offre</p>
+        <h2>Quatre métiers, un seul but : vendre plus.</h2>
+
+        <article class="service" id="web">
+          <div class="num">01</div>
+          <div>
+            <h3>Développement web</h3>
+            <p>Le site est le comptoir. Nous le construisons pour qu’une personne comprenne l’offre, avance, et achète — qu’il s’agisse d’une vitrine, d’une boutique, ou de pages taillées pour une demande précise.</p>
+          </div>
+          <ul class="deliverables">
+            <li>Site vitrine</li>
+            <li>Boutique en ligne</li>
+            <li>Pages qui convertissent</li>
+          </ul>
+        </article>
+
+        <article class="service" id="communaute">
+          <div class="num">02</div>
+          <div>
+            <h3>Community management</h3>
+            <p>Une présence qui ne s’éteint pas le mois du lancement. Nous tenons le rythme des publications, le ton de la maison, et les réponses aux gens qui écrivent.</p>
+          </div>
+          <ul class="deliverables">
+            <li>Calendrier éditorial</li>
+            <li>Réponses aux messages</li>
+            <li>Ton de marque, tenu dans la durée</li>
+          </ul>
+        </article>
+
+        <article class="service" id="partenaires">
+          <div class="num">03</div>
+          <div>
+            <h3>Partenaires internationaux</h3>
+            <p>Quand le marché d’à côté ne suffit plus, nous préparons le dossier et ouvrons les premiers échanges avec des partenaires hors du marché local — distributeurs, revendeurs, maisons complémentaires.</p>
+          </div>
+          <ul class="deliverables">
+            <li>Mise en relation</li>
+            <li>Dossiers de présentation</li>
+            <li>Premiers échanges hors du marché local</li>
+          </ul>
+        </article>
+
+        <article class="service" id="publicite">
+          <div class="num">04</div>
+          <div>
+            <h3>Publicité</h3>
+            <p>Facebook, TikTok, Instagram et Google Ads pour élargir qui vous voit, puis ramener ces personnes vers le site. Nous lisons le coût, les clics et les ventes, et nous ajustons ce qui ne tient pas. Aucun pourcentage promis à l’avance.</p>
+          </div>
+          <ul class="deliverables">
+            <li>Campagnes sur les quatre canaux</li>
+            <li>Audience élargie, puis ramenée au site</li>
+            <li>Suivi du coût, des clics et des ventes</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="channels" id="canaux">
+      <div class="wrap">
+        <p class="sec-kicker">Canaux</p>
+        <h2>Le pupitre. Quatre panneaux, quatre usages.</h2>
+      </div>
+      <div class="board">
+        <article class="panel">
+          <p class="ch">Canal 01</p>
+          <h3>Facebook</h3>
+          <p>Atteint des gens déjà installés dans leur quotidien, souvent proches d’un lieu ou d’un centre d’intérêt. Sert à faire revenir une communauté et à porter une offre qui a besoin de durée.</p>
+        </article>
+        <article class="panel">
+          <p class="ch">Canal 02</p>
+          <h3>TikTok</h3>
+          <p>Atteint une audience qui découvre vite, souvent en mouvement. Sert à montrer le produit en train d’exister, et à faire entrer des gens qui ne vous cherchaient pas encore.</p>
+        </article>
+        <article class="panel">
+          <p class="ch">Canal 03</p>
+          <h3>Instagram</h3>
+          <p>Atteint celles et ceux qui jugent d’abord par l’image. Sert à tenir le désir, le détail, et le chemin vers la boutique — une présence régulière, pas une affiche isolée.</p>
+        </article>
+        <article class="panel">
+          <p class="ch">Canal 04</p>
+          <h3>Google Ads</h3>
+          <p>Atteint les gens qui formulent déjà une recherche. Sert à être présent au moment de la requête, quand l’intention d’achat est là et que le site doit répondre sans détour.</p>
+        </article>
+      </div>
+      <div class="wrap">
+        <p class="board-close">Le mélange se choisit pour que la marque soit vue par plus de monde, puis ramenée sur le site pour acheter.</p>
+      </div>
+    </section>
+
+    <section id="methode">
+      <div class="wrap">
+        <p class="sec-kicker">Méthode</p>
+        <h2>Quatre temps, dans l’ordre de la vente.</h2>
+        <div class="method-grid">
+          <figure class="method-photo">
+            <img src="../assets/atelier.jpg" alt="Mains qui disposent des échantillons imprimés à côté d’un téléphone, sur une table de travail." width="1200" height="900">
+            <figcaption>Échantillons et téléphone — le message se règle avant d’être diffusé.</figcaption>
+          </figure>
+          <div>
+            <article class="step">
+              <div class="num">01</div>
+              <div>
+                <h3>Écouter le chiffre visé</h3>
+                <p>Le chiffre d’affaires que vous voulez, l’offre réelle, ce qui bloque aujourd’hui. On part de là, pas d’une liste d’outils.</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="num">02</div>
+              <div>
+                <h3>Construire le site et les messages</h3>
+                <p>Les pages et les phrases qui portent l’offre sans détour, pour que la visite ait une suite.</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="num">03</div>
+              <div>
+                <h3>Ouvrir canaux et partenaires</h3>
+                <p>La publicité et les mises en relation, dans l’ordre qui sert la vente — pas tout en même temps pour faire du bruit.</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="num">04</div>
+              <div>
+                <h3>Mesurer et ajuster</h3>
+                <p>Coût, clics, ventes. On garde ce qui ramène des acheteurs. On coupe ou on reprend ce qui ne tient pas.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="sec-kicker">Contact</p>
+          <h2>Parler d’un projet.</h2>
+          <p>Dites ce que vous vendez et le volume que vous visez. Réponse sous deux jours ouvrés.</p>
+        </div>
+        <div>
+          <form id="demande" novalidate>
+            <label>Nom
+              <input name="nom" type="text" autocomplete="name" required>
+              <span class="field-error" data-for="nom"></span>
+            </label>
+            <label>Entreprise
+              <input name="entreprise" type="text" autocomplete="organization" required>
+              <span class="field-error" data-for="entreprise"></span>
+            </label>
+            <label>E-mail
+              <input name="email" type="email" autocomplete="email" required>
+              <span class="field-error" data-for="email"></span>
+            </label>
+            <label>Message
+              <textarea name="message" required></textarea>
+              <span class="field-error" data-for="message"></span>
+            </label>
+            <button class="btn" type="submit">Envoyer la demande</button>
+            <p class="form-note">Aucun compte, aucun appel automatique. Un message, une réponse.</p>
+          </form>
+          <div class="confirm" id="confirm" role="status">
+            <h3>Demande notée — nous revenons vers vous.</h3>
+            <p>Sous deux jours ouvrés, à l’adresse indiquée. Si le sujet presse, écrivez à contact@vendoraxdigital.com.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <p class="wordmark"><img src="../assets/logo.png" alt="Vendorax Digital"></p>
+        <p>Plus de monde. Plus de ventes. Le site, les communautés, les partenaires et la publicité, tenus ensemble.</p>
+      </div>
+      <nav aria-label="Pied de page">
+        <a href="#offre">Offre</a>
+        <a href="#canaux">Canaux</a>
+        <a href="#methode">Méthode</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="foot-meta">
+        <div>2026</div>
+        <a href="mailto:contact@vendoraxdigital.com">contact@vendoraxdigital.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.querySelector(".site-header");
+    const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    const menuBtn = document.querySelector(".menu-btn");
+    menuBtn.addEventListener("click", () => {
+      const open = header.classList.toggle("is-open");
+      menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      menuBtn.textContent = open ? "Fermer" : "Menu";
+    });
+    document.querySelectorAll("#nav a, .header-cta").forEach((a) => {
+      a.addEventListener("click", () => {
+        header.classList.remove("is-open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.textContent = "Menu";
+      });
+    });
+
+    const form = document.getElementById("demande");
+    const messages = {
+      nom: "Indiquez votre nom.",
+      entreprise: "Indiquez le nom de l’entreprise.",
+      email: "Indiquez un e-mail valide.",
+      message: "Écrivez quelques lignes sur le projet."
+    };
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      let ok = true;
+      ["nom", "entreprise", "email", "message"].forEach((name) => {
+        const field = form.elements[name];
+        const slot = form.querySelector('[data-for="' + name + '"]');
+        const valid = name === "email" ? field.validity.valid && field.value.trim() : field.value.trim().length > 0;
+        slot.textContent = valid ? "" : messages[name];
+        if (!valid) ok = false;
+      });
+      if (!ok) {
+        const first = form.querySelector(".field-error:not(:empty)");
+        const input = first && first.previousElementSibling;
+        if (input) input.focus();
+        return;
+      }
+      form.classList.add("is-hidden");
+      document.getElementById("confirm").classList.add("is-on");
+    });
+  </script>
+</body>
+</html>
