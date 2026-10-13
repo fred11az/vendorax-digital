@@ -40,9 +40,9 @@ h3 { margin: 0 0 0.6rem; font-size: 1.7rem; }
 .bar { display: flex; align-items: center; gap: 1.2rem; min-height: 5.2rem; }
 .logo { display: flex; align-items: center; padding: 0.35rem 0; }
 .logo img { height: 3.05rem; width: auto; }
-nav { display: flex; gap: 0.85rem; margin-left: auto; }
-nav a { text-decoration: none; font-size: 0.86rem; white-space: nowrap; }
-nav a:hover { color: var(--blue-2); }
+.site-header nav { display: flex; gap: 0.85rem; margin-left: auto; }
+.site-header nav a { text-decoration: none; font-size: 0.86rem; white-space: nowrap; }
+.site-header nav a:hover { color: var(--blue-2); }
 .btn {
   display: inline-block; text-decoration: none; border: 0; cursor: pointer;
   background: var(--blue); color: #fff; font: inherit; font-weight: 700;
@@ -201,11 +201,32 @@ textarea { min-height: 7rem; }
 .hp { position: absolute; left: -9999px; }
 .error { color: #b42318; min-height: 1.2rem; margin: 0; }
 .hint { color: var(--muted); margin: 0; }
-.foot { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 1.5rem; padding-bottom: 2rem; }
-footer { background: var(--ink); color: #d5deea; }
-footer img { height: 3.1rem; width: auto; }
-footer a { display: block; margin: 0.25rem 0; }
-.sig { color: #8ec4ff; }
+.foot {
+  display: grid;
+  grid-template-columns: 1.35fr 0.8fr 1fr 1fr;
+  gap: 2rem 1.5rem;
+  padding: 3rem 0 1.6rem;
+}
+.foot-title {
+  margin: 0 0 0.8rem;
+  color: #fff;
+  font-family: Syne, sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+}
+.foot p { margin: 0.7rem 0 0; max-width: 28rem; }
+footer { background: var(--ink); color: #c5d0de; position: relative; overflow: hidden; }
+footer img { height: 3.2rem; width: auto; }
+footer a { display: block; margin: 0.35rem 0; text-decoration: none; color: #d5deea; transition: color .15s ease; }
+footer a:hover { color: #4aa3ff; }
+.sig { color: #8ec4ff; font-size: 0.88rem; }
+.foot-base {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(142, 196, 255, 0.22);
+  padding: 0.9rem 0 1.2rem;
+}
+.foot-base p { margin: 0; font-size: 0.88rem; }
 
 #approche {
   background: radial-gradient(520px 240px at 8% 0%, rgba(28,109,255,.3), transparent 70%), var(--ink);
@@ -223,10 +244,6 @@ footer a { display: block; margin: 0.25rem 0; }
   transform: translateY(-50%); background: url("logo.png") center / contain no-repeat; opacity: .18; pointer-events: none;
 }
 footer { position: relative; overflow: hidden; }
-footer::before {
-  content: ""; position: absolute; left: -1rem; bottom: -2.5rem; width: 18rem; height: 8rem;
-  background: url("logo.png") left center / contain no-repeat; opacity: .09; pointer-events: none;
-}
 .shot { height: 220px; border: 1px solid rgba(255,255,255,.08); }
 .shot.site {
   background:
@@ -262,15 +279,20 @@ footer::before {
 
 @media (max-width: 900px) {
   .menu { display: inline-block; }
-  nav { display: none; position: absolute; top: 5.2rem; left: 0; right: 0; background: var(--ink); padding: 1rem 1.25rem 1.2rem; flex-direction: column; }
-  .band::after, .hero::before, footer::before { display: none; }
+  .site-header nav { display: none; position: absolute; top: 5.2rem; left: 0; right: 0; background: var(--ink); padding: 1rem 1.25rem 1.2rem; flex-direction: column; }
+  .band::after, .hero::before { display: none; }
   .site-header.is-open nav { display: flex; }
   .bar .btn, .lang-select { display: none; }
-  .hero-grid, .split, .service-grid, .steps, .gallery, .channels, .foot, .contact-board, .form-row { grid-template-columns: 1fr; }
+  .hero-grid, .split, .service-grid, .steps, .gallery, .channels, .contact-board, .form-row { grid-template-columns: 1fr; }
   .contact-aside::after { display: none; }
   .stage { min-height: 260px; }
 }
-@media (prefers-reduced-motion: reduce) {
+@media (max-width: 980px) {
+  .foot { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .foot { grid-template-columns: 1fr; gap: 1.4rem; }
+}
   html { scroll-behavior: auto; }
-  .btn, .steps li, .channels div, .gallery figure, .browser, .phone { transition: none; }
+  .btn, .steps li, .channels div, .gallery figure, .browser, .phone, footer a { transition: none; }
 }

@@ -65,3 +65,7 @@ form.addEventListener("submit", (event) => {
   hint.textContent = copy.hint || "Votre messagerie va s’ouvrir. Le message part vers contact@vendoraxdigital.com.";
   window.location.href = "mailto:contact@vendoraxdigital.com?subject=" + encodeURIComponent(copy.subject || "Projet Vendorax Digital") + "&body=" + encodeURIComponent(body);
 });
+
+document.querySelectorAll(".year").forEach((el) => {
+  el.textContent = String(new Date().getFullYear());
+});
