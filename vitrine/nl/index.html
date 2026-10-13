@@ -257,26 +257,25 @@
     </section>
 
     <section id="contact">
-      <div class="wrap split">
-        <div>
+      <div class="contact-board">
+        <div class="contact-aside">
+          <img src="../assets/logo.png" alt="Vendorax Digital">
           <p class="kicker">Contact</p>
-          <h2>Beschrijf het project.</h2>
+          <h2>Laten we uw volgende project tot leven brengen.</h2>
           <p>Het verzoek opent uw e-mail en is gericht aan <a href="mailto:contact@vendoraxdigital.com">contact@vendoraxdigital.com</a>. Er wordt niets op de site opgeslagen.</p>
+          <ul class="contact-points"><li>Persoonlijke begeleiding</li><li>Passende oplossingen</li><li>Gericht op resultaat</li></ul>
         </div>
-        <form id="projet" action="mailto:contact@vendoraxdigital.com" method="post" enctype="text/plain" novalidate>
-          <label>Voor- en achternaam
+        <form id="projet" class="contact-form" action="mailto:contact@vendoraxdigital.com" method="post" enctype="text/plain" novalidate>
+          <h2>Laten we over uw project praten</h2>
+          <div class="form-row"><label>Voor- en achternaam
             <input name="nom" autocomplete="name" required>
-          </label>
-          <label>Bedrijf <span class="opt">optioneel</span>
+          </label><label>Bedrijf <span class="opt">optioneel</span>
             <input name="entreprise" autocomplete="organization">
-          </label>
-          <label>E-mail
+          </label></div><div class="form-row"><label>E-mail
             <input name="email" type="email" autocomplete="email" required>
-          </label>
-          <label>Telefoon <span class="opt">optioneel</span>
+          </label><label>Telefoon <span class="opt">optioneel</span>
             <input name="telephone" type="tel" autocomplete="tel">
-          </label>
-          <label>Gevraagde dienst
+          </label></div><label>Gevraagde dienst
             <select name="service" required>
               <option value="">Kiezen</option>
               <option>Webdevelopment</option>
@@ -285,16 +284,14 @@
               <option>Internationale partners</option>
               <option>Meerdere diensten</option>
             </select>
-          </label>
-          <label>Indicatief budget <span class="opt">optioneel</span>
+          </label><label>Indicatief budget <span class="opt">optioneel</span>
             <input name="budget">
-          </label>
-          <label>Projectbeschrijving
+          </label><label>Projectbeschrijving
             <textarea name="message" required></textarea>
           </label>
           <label class="hp">Niet invullen <input name="site" tabindex="-1" autocomplete="off"></label>
           <p class="error" id="form-error" role="alert"></p>
-          <button class="btn" type="submit">Versturen via mijn e-mail</button>
+          <button class="btn" type="submit">Verstuur mijn aanvraag</button>
           <p class="hint" id="form-hint"></p>
         </form>
       </div>

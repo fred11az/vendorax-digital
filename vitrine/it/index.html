@@ -257,26 +257,25 @@
     </section>
 
     <section id="contact">
-      <div class="wrap split">
-        <div>
+      <div class="contact-board">
+        <div class="contact-aside">
+          <img src="../assets/logo.png" alt="Vendorax Digital">
           <p class="kicker">Contact</p>
-          <h2>Descrivi il progetto.</h2>
+          <h2>Diamo vita al tuo prossimo progetto.</h2>
           <p>La richiesta apre la tua posta ed è indirizzata a <a href="mailto:contact@vendoraxdigital.com">contact@vendoraxdigital.com</a>. Nulla viene salvato sul sito.</p>
+          <ul class="contact-points"><li>Accompagnamento su misura</li><li>Soluzioni adatte</li><li>Sguardo ai risultati</li></ul>
         </div>
-        <form id="projet" action="mailto:contact@vendoraxdigital.com" method="post" enctype="text/plain" novalidate>
-          <label>Nome e cognome
+        <form id="projet" class="contact-form" action="mailto:contact@vendoraxdigital.com" method="post" enctype="text/plain" novalidate>
+          <h2>Parliamo del tuo progetto</h2>
+          <div class="form-row"><label>Nome e cognome
             <input name="nom" autocomplete="name" required>
-          </label>
-          <label>Azienda <span class="opt">facoltativo</span>
+          </label><label>Azienda <span class="opt">facoltativo</span>
             <input name="entreprise" autocomplete="organization">
-          </label>
-          <label>E-mail
+          </label></div><div class="form-row"><label>E-mail
             <input name="email" type="email" autocomplete="email" required>
-          </label>
-          <label>Telefono <span class="opt">facoltativo</span>
+          </label><label>Telefono <span class="opt">facoltativo</span>
             <input name="telephone" type="tel" autocomplete="tel">
-          </label>
-          <label>Servizio cercato
+          </label></div><label>Servizio cercato
             <select name="service" required>
               <option value="">Scegli</option>
               <option>Sviluppo web</option>
@@ -285,16 +284,14 @@
               <option>Partner internazionali</option>
               <option>Più servizi</option>
             </select>
-          </label>
-          <label>Budget indicativo <span class="opt">facoltativo</span>
+          </label><label>Budget indicativo <span class="opt">facoltativo</span>
             <input name="budget">
-          </label>
-          <label>Descrizione del progetto
+          </label><label>Descrizione del progetto
             <textarea name="message" required></textarea>
           </label>
           <label class="hp">Non compilare <input name="site" tabindex="-1" autocomplete="off"></label>
           <p class="error" id="form-error" role="alert"></p>
-          <button class="btn" type="submit">Invia dalla mia posta</button>
+          <button class="btn" type="submit">Invia la richiesta</button>
           <p class="hint" id="form-hint"></p>
         </form>
       </div>

@@ -257,26 +257,25 @@
     </section>
 
     <section id="contact">
-      <div class="wrap split">
-        <div>
+      <div class="contact-board">
+        <div class="contact-aside">
+          <img src="../assets/logo.png" alt="Vendorax Digital">
           <p class="kicker">Contact</p>
-          <h2>Describe the project.</h2>
+          <h2>Let's bring your next project to life.</h2>
           <p>The request opens your email app and is addressed to <a href="mailto:contact@vendoraxdigital.com">contact@vendoraxdigital.com</a>. Nothing is stored on the site.</p>
+          <ul class="contact-points"><li>Personal support</li><li>Solutions fitted to you</li><li>A results-oriented outlook</li></ul>
         </div>
-        <form id="projet" action="mailto:contact@vendoraxdigital.com" method="post" enctype="text/plain" novalidate>
-          <label>Full name
+        <form id="projet" class="contact-form" action="mailto:contact@vendoraxdigital.com" method="post" enctype="text/plain" novalidate>
+          <h2>Let's talk about your project</h2>
+          <div class="form-row"><label>Full name
             <input name="nom" autocomplete="name" required>
-          </label>
-          <label>Company <span class="opt">optional</span>
+          </label><label>Company <span class="opt">optional</span>
             <input name="entreprise" autocomplete="organization">
-          </label>
-          <label>E-mail
+          </label></div><div class="form-row"><label>E-mail
             <input name="email" type="email" autocomplete="email" required>
-          </label>
-          <label>Phone <span class="opt">optional</span>
+          </label><label>Phone <span class="opt">optional</span>
             <input name="telephone" type="tel" autocomplete="tel">
-          </label>
-          <label>Service sought
+          </label></div><label>Service sought
             <select name="service" required>
               <option value="">Choose</option>
               <option>Web development</option>
@@ -285,16 +284,14 @@
               <option>International partners</option>
               <option>Several services</option>
             </select>
-          </label>
-          <label>Indicative budget <span class="opt">optional</span>
+          </label><label>Indicative budget <span class="opt">optional</span>
             <input name="budget">
-          </label>
-          <label>Project description
+          </label><label>Project description
             <textarea name="message" required></textarea>
           </label>
           <label class="hp">Do not fill in <input name="site" tabindex="-1" autocomplete="off"></label>
           <p class="error" id="form-error" role="alert"></p>
-          <button class="btn" type="submit">Send via my email</button>
+          <button class="btn" type="submit">Send my request</button>
           <p class="hint" id="form-hint"></p>
         </form>
       </div>

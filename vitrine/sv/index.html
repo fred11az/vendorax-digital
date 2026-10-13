@@ -257,26 +257,25 @@
     </section>
 
     <section id="contact">
-      <div class="wrap split">
-        <div>
+      <div class="contact-board">
+        <div class="contact-aside">
+          <img src="../assets/logo.png" alt="Vendorax Digital">
           <p class="kicker">Contact</p>
-          <h2>Beskriv projektet.</h2>
+          <h2>Låt oss ge ert nästa projekt liv.</h2>
           <p>Förfrågan öppnar er e-post och går till <a href="mailto:contact@vendoraxdigital.com">contact@vendoraxdigital.com</a>. Inget sparas på webbplatsen.</p>
+          <ul class="contact-points"><li>Personligt stöd</li><li>Anpassade lösningar</li><li>Fokus på resultat</li></ul>
         </div>
-        <form id="projet" action="mailto:contact@vendoraxdigital.com" method="post" enctype="text/plain" novalidate>
-          <label>För- och efternamn
+        <form id="projet" class="contact-form" action="mailto:contact@vendoraxdigital.com" method="post" enctype="text/plain" novalidate>
+          <h2>Låt oss tala om ert projekt</h2>
+          <div class="form-row"><label>För- och efternamn
             <input name="nom" autocomplete="name" required>
-          </label>
-          <label>Företag <span class="opt">valfritt</span>
+          </label><label>Företag <span class="opt">valfritt</span>
             <input name="entreprise" autocomplete="organization">
-          </label>
-          <label>E-mail
+          </label></div><div class="form-row"><label>E-mail
             <input name="email" type="email" autocomplete="email" required>
-          </label>
-          <label>Telefon <span class="opt">valfritt</span>
+          </label><label>Telefon <span class="opt">valfritt</span>
             <input name="telephone" type="tel" autocomplete="tel">
-          </label>
-          <label>Önskad tjänst
+          </label></div><label>Önskad tjänst
             <select name="service" required>
               <option value="">Välj</option>
               <option>Webbutveckling</option>
@@ -285,16 +284,14 @@
               <option>Internationella partner</option>
               <option>Flera tjänster</option>
             </select>
-          </label>
-          <label>Ungefärlig budget <span class="opt">valfritt</span>
+          </label><label>Ungefärlig budget <span class="opt">valfritt</span>
             <input name="budget">
-          </label>
-          <label>Projektbeskrivning
+          </label><label>Projektbeskrivning
             <textarea name="message" required></textarea>
           </label>
           <label class="hp">Fyll inte i <input name="site" tabindex="-1" autocomplete="off"></label>
           <p class="error" id="form-error" role="alert"></p>
-          <button class="btn" type="submit">Skicka via min e-post</button>
+          <button class="btn" type="submit">Skicka min förfrågan</button>
           <p class="hint" id="form-hint"></p>
         </form>
       </div>
