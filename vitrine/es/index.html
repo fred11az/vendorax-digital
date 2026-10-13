@@ -161,6 +161,61 @@
       font-size: 0.85rem;
     }
 
+
+    .choices {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin-top: 2.2rem;
+    }
+    .choices a {
+      display: flex;
+      flex-direction: column;
+      min-height: 12.5rem;
+      padding: 1.25rem 1.15rem 1.35rem;
+      text-decoration: none;
+      background: #0c1528;
+      border: 1px solid rgba(142, 196, 255, 0.28);
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+    .choices a:hover {
+      transform: translateY(-6px);
+      border-color: #1c6dff;
+      background: #12203a;
+    }
+    .choices small {
+      color: var(--brass);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+    }
+    .choices strong {
+      display: block;
+      margin: 0.7rem 0 0.4rem;
+      font-family: "Fraunces", serif;
+      font-weight: 640;
+      font-size: clamp(1.45rem, 2vw, 1.9rem);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .choices span { color: #d5deea; font-size: 0.95rem; }
+    .hero-photo, .volume-block { display: none; }
+    .faq details {
+      border-top: 1px solid var(--line);
+      padding: 1rem 0;
+    }
+    .faq details:last-of-type { border-bottom: 1px solid var(--line); }
+    .faq summary {
+      cursor: pointer;
+      font-family: "Fraunces", serif;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+      list-style: none;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq details p { margin: 0.7rem 0 0.2rem; max-width: 40rem; }
+
     /* Hero */
     .hero {
       background: var(--ink);
@@ -757,12 +812,18 @@
       <div class="hero-main">
         <div>
           <p class="eyebrow">Estudio de crecimiento comercial</p>
-          <h1 id="hero-title">Hacemos que llegue la gente. Después, hacemos que compre.</h1>
+          <h1 id="hero-title">¿Hasta dónde quieren vender?</h1>
           <p class="lede">Desarrollo web, community management, socios internacionales y publicidad en Facebook, TikTok, Instagram y Google Ads — para que un comercio sea visto por más gente y, después, elegido.</p>
           <div class="actions">
             <a class="btn" href="#contact">Pedir un diagnóstico</a>
             <a class="btn-ghost" href="#offre">Ver la oferta</a>
           </div>
+        </div>
+        <div class="choices">
+          <a href="#web"><small>01</small><strong>Sitio</strong><span>Para ser entendidos, y luego elegidos.</span></a>
+          <a href="#communaute"><small>02</small><strong>Comunidad</strong><span>Para responder, cada día.</span></a>
+          <a href="#partenaires"><small>03</small><strong>Socios</strong><span>Para vender fuera del país.</span></a>
+          <a href="#publicite"><small>04</small><strong>Publicidad</strong><span>Facebook, TikTok, Instagram, Google.</span></a>
         </div>
         <figure class="hero-photo">
           <img src="../assets/hero.jpg" alt="Mesa de trabajo vista desde arriba: planos impresos, ordenador abierto en una tienda, teléfono con un hilo de publicaciones." width="1280" height="720">
@@ -949,6 +1010,17 @@
             </article>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="wrap">
+        <p class="sec-kicker">Preguntas</p>
+        <h2>Antes de escribir.</h2>
+        <details><summary>¿Hacen el sitio y la publicidad juntos?</summary><p>Sí. El sitio, las redes y las campañas están en el mismo equipo, para que la visita acabe en una venta.</p></details>
+        <details><summary>¿Qué canales?</summary><p>Facebook, TikTok, Instagram y Google Ads. Solo los que sirven a la cifra que buscan.</p></details>
+        <details><summary>¿Encuentran socios en el extranjero?</summary><p>Preparamos el dossier y los primeros contactos. No prometemos una firma.</p></details>
+        <details><summary>¿Cuánto tarda una respuesta?</summary><p>Dos días laborables.</p></details>
       </div>
     </section>
 

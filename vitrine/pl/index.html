@@ -161,6 +161,61 @@
       font-size: 0.85rem;
     }
 
+
+    .choices {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin-top: 2.2rem;
+    }
+    .choices a {
+      display: flex;
+      flex-direction: column;
+      min-height: 12.5rem;
+      padding: 1.25rem 1.15rem 1.35rem;
+      text-decoration: none;
+      background: #0c1528;
+      border: 1px solid rgba(142, 196, 255, 0.28);
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+    .choices a:hover {
+      transform: translateY(-6px);
+      border-color: #1c6dff;
+      background: #12203a;
+    }
+    .choices small {
+      color: var(--brass);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+    }
+    .choices strong {
+      display: block;
+      margin: 0.7rem 0 0.4rem;
+      font-family: "Fraunces", serif;
+      font-weight: 640;
+      font-size: clamp(1.45rem, 2vw, 1.9rem);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .choices span { color: #d5deea; font-size: 0.95rem; }
+    .hero-photo, .volume-block { display: none; }
+    .faq details {
+      border-top: 1px solid var(--line);
+      padding: 1rem 0;
+    }
+    .faq details:last-of-type { border-bottom: 1px solid var(--line); }
+    .faq summary {
+      cursor: pointer;
+      font-family: "Fraunces", serif;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+      list-style: none;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq details p { margin: 0.7rem 0 0.2rem; max-width: 40rem; }
+
     /* Hero */
     .hero {
       background: var(--ink);
@@ -757,12 +812,18 @@
       <div class="hero-main">
         <div>
           <p class="eyebrow">Studio wzrostu sprzedaży</p>
-          <h1 id="hero-title">Ściągamy ludzi. Potem sprawiamy, że kupują.</h1>
+          <h1 id="hero-title">Jak daleko chcecie sprzedawać?</h1>
           <p class="lede">Tworzenie stron, community management, partnerzy międzynarodowi oraz reklama na Facebooku, TikToku, Instagramie i w Google Ads — żeby firmę zobaczyło więcej osób, a potem ją wybrało.</p>
           <div class="actions">
             <a class="btn" href="#contact">Poproś o diagnozę</a>
             <a class="btn-ghost" href="#offre">Zobacz ofertę</a>
           </div>
+        </div>
+        <div class="choices">
+          <a href="#web"><small>01</small><strong>Strona</strong><span>Żeby was zrozumiano, potem wybrano.</span></a>
+          <a href="#communaute"><small>02</small><strong>Społeczność</strong><span>Żeby odpowiadać, codziennie.</span></a>
+          <a href="#partenaires"><small>03</small><strong>Partnerzy</strong><span>Żeby sprzedawać poza krajem.</span></a>
+          <a href="#publicite"><small>04</small><strong>Reklama</strong><span>Facebook, TikTok, Instagram, Google.</span></a>
         </div>
         <figure class="hero-photo">
           <img src="../assets/hero.jpg" alt="Stół roboczy z góry: wydrukowane plany, laptop otwarty na sklepie, telefon z feedem publikacji." width="1280" height="720">
@@ -949,6 +1010,17 @@
             </article>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="wrap">
+        <p class="sec-kicker">Pytania</p>
+        <h2>Zanim napiszecie.</h2>
+        <details><summary>Robicie stronę i reklamy razem?</summary><p>Tak. Strona, social media i kampanie są w jednym zespole, żeby wizyta kończyła się sprzedażą.</p></details>
+        <details><summary>Jakie kanały?</summary><p>Facebook, TikTok, Instagram i Google Ads. Tylko te, które służą liczbie, którą chcecie osiągnąć.</p></details>
+        <details><summary>Znajdujecie partnerów za granicą?</summary><p>Przygotowujemy dossier i pierwsze rozmowy. Nie obiecujemy podpisu.</p></details>
+        <details><summary>Jak szybko odpisujecie?</summary><p>W dwa dni robocze.</p></details>
       </div>
     </section>
 

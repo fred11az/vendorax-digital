@@ -161,6 +161,61 @@
       font-size: 0.85rem;
     }
 
+
+    .choices {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin-top: 2.2rem;
+    }
+    .choices a {
+      display: flex;
+      flex-direction: column;
+      min-height: 12.5rem;
+      padding: 1.25rem 1.15rem 1.35rem;
+      text-decoration: none;
+      background: #0c1528;
+      border: 1px solid rgba(142, 196, 255, 0.28);
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+    .choices a:hover {
+      transform: translateY(-6px);
+      border-color: #1c6dff;
+      background: #12203a;
+    }
+    .choices small {
+      color: var(--brass);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+    }
+    .choices strong {
+      display: block;
+      margin: 0.7rem 0 0.4rem;
+      font-family: "Fraunces", serif;
+      font-weight: 640;
+      font-size: clamp(1.45rem, 2vw, 1.9rem);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .choices span { color: #d5deea; font-size: 0.95rem; }
+    .hero-photo, .volume-block { display: none; }
+    .faq details {
+      border-top: 1px solid var(--line);
+      padding: 1rem 0;
+    }
+    .faq details:last-of-type { border-bottom: 1px solid var(--line); }
+    .faq summary {
+      cursor: pointer;
+      font-family: "Fraunces", serif;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+      list-style: none;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq details p { margin: 0.7rem 0 0.2rem; max-width: 40rem; }
+
     /* Hero */
     .hero {
       background: var(--ink);
@@ -757,12 +812,18 @@
       <div class="hero-main">
         <div>
           <p class="eyebrow">Studio voor commerciële groei</p>
-          <h1 id="hero-title">We laten mensen komen. Daarna laten we ze kopen.</h1>
+          <h1 id="hero-title">Hoe ver wilt u verkopen?</h1>
           <p class="lede">Webontwikkeling, community management, internationale partners en reclame op Facebook, TikTok, Instagram en Google Ads — zodat een zaak door meer mensen wordt gezien en daarna gekozen.</p>
           <div class="actions">
             <a class="btn" href="#contact">Een diagnose vragen</a>
             <a class="btn-ghost" href="#offre">Het aanbod bekijken</a>
           </div>
+        </div>
+        <div class="choices">
+          <a href="#web"><small>01</small><strong>Site</strong><span>Om begrepen te worden, dan gekozen.</span></a>
+          <a href="#communaute"><small>02</small><strong>Community</strong><span>Om te antwoorden, elke dag.</span></a>
+          <a href="#partenaires"><small>03</small><strong>Partners</strong><span>Om buiten het land te verkopen.</span></a>
+          <a href="#publicite"><small>04</small><strong>Adverteren</strong><span>Facebook, TikTok, Instagram, Google.</span></a>
         </div>
         <figure class="hero-photo">
           <img src="../assets/hero.jpg" alt="Werktafel van bovenaf: afgedrukte plannen, een computer open op een winkel, een telefoon met een stroom publicaties." width="1280" height="720">
@@ -949,6 +1010,17 @@
             </article>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="wrap">
+        <p class="sec-kicker">Vragen</p>
+        <h2>Voor u schrijft.</h2>
+        <details><summary>Bouwen jullie de site en draaien jullie de ads samen?</summary><p>Ja. Site, social en campagnes zitten bij hetzelfde team, zodat een bezoek in een verkoop eindigt.</p></details>
+        <details><summary>Welke kanalen?</summary><p>Facebook, TikTok, Instagram en Google Ads. Alleen die het getal dienen dat u wilt halen.</p></details>
+        <details><summary>Vinden jullie partners in het buitenland?</summary><p>We maken het dossier en de eerste gesprekken. We beloven geen handtekening.</p></details>
+        <details><summary>Hoe snel komt een antwoord?</summary><p>Binnen twee werkdagen.</p></details>
       </div>
     </section>
 
