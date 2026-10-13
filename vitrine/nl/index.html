@@ -17,6 +17,7 @@
   <link rel="alternate" hreflang="es" href="https://vendoraxdigital.com/es/">
   <link rel="alternate" hreflang="x-default" href="https://vendoraxdigital.com/en/">
   <link rel="icon" href="../assets/logo.png">
+  <meta property="og:image" content="https://vendoraxdigital.com/assets/logo.png">
   <meta property="og:title" content="Vendorax Digital | Digitaal in dienst van uw groei">
   <meta property="og:description" content="Websites, digitale communicatie, gerichte advertenties en internationale kansen.">
   <meta property="og:type" content="website">
@@ -138,7 +139,7 @@
               <li>Landingspagina’s gericht op conversie</li>
               <li>Herontwerp, prestaties, onderhoud en SEO</li>
             </ul>
-            <a class="text-link" href="#contact">Meer weten</a>
+            <a class="text-link" href="#contact" data-service="Webdevelopment">Meer weten</a>
           </div>
         </div>
       </article>
@@ -155,7 +156,7 @@
               <li>Community en antwoorden</li>
               <li>Opvolging en aanbevelingen</li>
             </ul>
-            <a class="text-link" href="#contact">Meer weten</a>
+            <a class="text-link" href="#contact" data-service="Community management">Meer weten</a>
           </div>
           <div class="mock social" aria-hidden="true">
             <div class="post"></div>
@@ -178,7 +179,7 @@
           <ul class="inline">
             <li>Targeting</li><li>Advertenties maken</li><li>Leads</li><li>Retargeting</li><li>Conversies volgen</li><li>Doorlopende optimalisatie</li>
           </ul>
-          <a class="text-link" href="#contact">Meer weten</a>
+          <a class="text-link" href="#contact" data-service="Digitale advertenties">Meer weten</a>
         </div>
       </article>
 
@@ -194,7 +195,7 @@
               <li>In contact brengen</li>
               <li>Begeleiding van de eerste gesprekken</li>
             </ul>
-            <a class="text-link" href="#contact">Meer weten</a>
+            <a class="text-link" href="#contact" data-service="Internationale partners">Meer weten</a>
           </div>
         </div>
       </article>
@@ -225,7 +226,43 @@
           <button type="button" data-filter="ads">Campagnes</button>
         </div>
         <div class="gallery">
-          <figure data-kind="web"><div class="shot site"></div><figcaption>Concept — bedrijfspagina</figcaption></figure>
+          <figure data-kind="web">
+            <div class="shot site"></div>
+            <figcaption>Concept — bedrijfspagina</figcaption>
+            <button type="button" class="case-btn open-case">Bekijk het concept</button>
+            <div class="case-copy" hidden>
+              <h3>Bedrijfspagina</h3>
+              <p><strong>Behoefte.</strong> Een bedrijf heeft een duidelijke pagina nodig om het aanbod te tonen.</p>
+              <p><strong>Ontwerpkeuzes.</strong> Een korte pagina, een zichtbare oproep, eerst voor de telefoon geschreven.</p>
+              <p><strong>Voorziene functies.</strong> Aanbod, dienstenpagina’s, contactformulier.</p>
+              <p><strong>Verwachte waarde.</strong> De bezoeker begrijpt het aanbod en kan schrijven. Aan dit concept hangt geen commercieel resultaat.</p>
+            </div>
+          </figure>
+          <figure data-kind="social">
+            <div class="shot feed"></div>
+            <figcaption>Concept — reeks berichten</figcaption>
+            <button type="button" class="case-btn open-case">Bekijk het concept</button>
+            <div class="case-copy" hidden>
+              <h3>Reeks berichten</h3>
+              <p><strong>Behoefte.</strong> Regelmatig publiceren zonder elke week te improviseren.</p>
+              <p><strong>Ontwerpkeuzes.</strong> Een reeks consistente beelden en een eenvoudige kalender.</p>
+              <p><strong>Voorziene functies.</strong> Beelden, bijschriften, publicatieritme.</p>
+              <p><strong>Verwachte waarde.</strong> Een leesbaardere aanwezigheid. Dit is geen echt account.</p>
+            </div>
+          </figure>
+          <figure data-kind="ads">
+            <div class="shot ads"></div>
+            <figcaption>Concept — campagnestructuur</figcaption>
+            <button type="button" class="case-btn open-case">Bekijk het concept</button>
+            <div class="case-copy" hidden>
+              <h3>Campagnestructuur</h3>
+              <p><strong>Behoefte.</strong> Een campagne ordenen zonder een verkoopvolume te beloven.</p>
+              <p><strong>Ontwerpkeuzes.</strong> Vier mogelijke kanalen: Facebook, Instagram, TikTok en Google, met opvolging.</p>
+              <p><strong>Voorziene functies.</strong> Doelgroepen, advertenties, retargeting, data lezen.</p>
+              <p><strong>Verwachte waarde.</strong> Een methode om bij te stellen. Er wordt geen prestatiecijfer getoond.</p>
+            </div>
+          </figure>
+        </div><figcaption>Concept — bedrijfspagina</figcaption></figure>
           <figure data-kind="social"><div class="shot feed"></div><figcaption>Concept — reeks berichten</figcaption></figure>
           <figure data-kind="ads"><div class="shot ads"></div><figcaption>Concept — campagnestructuur</figcaption></figure>
         </div>
@@ -245,6 +282,7 @@
           <li>Begeleiding tijdens het hele project</li>
           <li>Voortdurende verbetering, zonder resultaatbelofte</li>
         </ul>
+        <p class="note">Het werk is voor bedrijven, winkels, ondernemers en organisaties die hun online aanwezigheid willen ordenen.</p>
       </div>
     </section>
 
@@ -332,6 +370,10 @@
       <p>© <span class="year"></span> Vendorax Digital. Alle rechten voorbehouden.</p>
     </div>
   </footer>
+  <dialog class="case" id="case" aria-labelledby="case-title">
+    <div class="case-slot"></div>
+    <button type="button" class="btn case-close">Sluiten</button>
+  </dialog>
   <script src="../assets/site.js"></script>
 </body>
 </html>

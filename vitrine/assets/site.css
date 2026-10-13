@@ -120,7 +120,15 @@ section { padding: 4.5rem 0; }
 .filters button { font: inherit; border: 1px solid var(--line); background: #fff; border-radius: 99px; padding: 0.4rem 0.8rem; cursor: pointer; }
 .filters button.on { background: var(--ink); color: #fff; }
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-.gallery figure { margin: 0; }
+.gallery figure { margin: 0; background: #fff; border-radius: 18px; padding: 0.7rem 0.7rem 1rem; }
+.case-btn { margin-top: 0.6rem; background: none; border: 0; color: var(--blue); font: inherit; font-weight: 700; cursor: pointer; padding: 0; }
+dialog.case {
+  border: 0; border-radius: 18px; padding: 1.4rem 1.3rem; max-width: 34rem; width: calc(100% - 2rem);
+  box-shadow: 0 24px 60px rgba(7, 13, 24, 0.28);
+}
+dialog.case::backdrop { background: rgba(7, 13, 24, 0.55); }
+dialog.case h3 { margin-top: 0; }
+.case-close { margin-top: 0.6rem; }
 .shot { height: 180px; border-radius: 16px; background: #d5e4f8; }
 .shot.feed { background: linear-gradient(160deg, #1c6dff 30%, #d5e4f8 30%); }
 .shot.ads { background: linear-gradient(#0c1528 60%, #4aa3ff 60%); }

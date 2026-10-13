@@ -17,6 +17,7 @@
   <link rel="alternate" hreflang="es" href="https://vendoraxdigital.com/es/">
   <link rel="alternate" hreflang="x-default" href="https://vendoraxdigital.com/en/">
   <link rel="icon" href="../assets/logo.png">
+  <meta property="og:image" content="https://vendoraxdigital.com/assets/logo.png">
   <meta property="og:title" content="Vendorax Digital | Digitalt i tjänst för er tillväxt">
   <meta property="og:description" content="Webbplatser, digital kommunikation, riktad annonsering och internationella möjligheter.">
   <meta property="og:type" content="website">
@@ -138,7 +139,7 @@
               <li>Landningssidor för konvertering</li>
               <li>Omgörning, prestanda, underhåll och SEO</li>
             </ul>
-            <a class="text-link" href="#contact">Läs mer</a>
+            <a class="text-link" href="#contact" data-service="Webbutveckling">Läs mer</a>
           </div>
         </div>
       </article>
@@ -155,7 +156,7 @@
               <li>Community och svar</li>
               <li>Uppföljning och rekommendationer</li>
             </ul>
-            <a class="text-link" href="#contact">Läs mer</a>
+            <a class="text-link" href="#contact" data-service="Community management">Läs mer</a>
           </div>
           <div class="mock social" aria-hidden="true">
             <div class="post"></div>
@@ -178,7 +179,7 @@
           <ul class="inline">
             <li>Målgruppsval</li><li>Annonser</li><li>Förfrågningar</li><li>Retargeting</li><li>Konverteringsuppföljning</li><li>Löpande optimering</li>
           </ul>
-          <a class="text-link" href="#contact">Läs mer</a>
+          <a class="text-link" href="#contact" data-service="Digital annonsering">Läs mer</a>
         </div>
       </article>
 
@@ -194,7 +195,7 @@
               <li>Kontaktförmedling</li>
               <li>Stöd vid de första samtalen</li>
             </ul>
-            <a class="text-link" href="#contact">Läs mer</a>
+            <a class="text-link" href="#contact" data-service="Internationella partner">Läs mer</a>
           </div>
         </div>
       </article>
@@ -225,7 +226,43 @@
           <button type="button" data-filter="ads">Kampanjer</button>
         </div>
         <div class="gallery">
-          <figure data-kind="web"><div class="shot site"></div><figcaption>Koncept — presentationssida</figcaption></figure>
+          <figure data-kind="web">
+            <div class="shot site"></div>
+            <figcaption>Koncept — presentationssida</figcaption>
+            <button type="button" class="case-btn open-case">Visa konceptet</button>
+            <div class="case-copy" hidden>
+              <h3>Presentationssida</h3>
+              <p><strong>Behov.</strong> Ett företag behöver en tydlig sida för sitt erbjudande.</p>
+              <p><strong>Designval.</strong> En kort sida, en synlig uppmaning, skriven för mobil först.</p>
+              <p><strong>Tänkta funktioner.</strong> Erbjudande, tjänstesidor, kontaktformulär.</p>
+              <p><strong>Förväntat värde.</strong> Besökaren förstår erbjudandet och kan skriva. Inget kommersiellt resultat hör till konceptet.</p>
+            </div>
+          </figure>
+          <figure data-kind="social">
+            <div class="shot feed"></div>
+            <figcaption>Koncept — inläggsserie</figcaption>
+            <button type="button" class="case-btn open-case">Visa konceptet</button>
+            <div class="case-copy" hidden>
+              <h3>Inläggsserie</h3>
+              <p><strong>Behov.</strong> Publicera regelbundet utan att improvisera varje vecka.</p>
+              <p><strong>Designval.</strong> En enhetlig bildserie och en enkel kalender.</p>
+              <p><strong>Tänkta funktioner.</strong> Bilder, texter, publiceringsrytm.</p>
+              <p><strong>Förväntat värde.</strong> En tydligare närvaro. Det här är inget riktigt konto.</p>
+            </div>
+          </figure>
+          <figure data-kind="ads">
+            <div class="shot ads"></div>
+            <figcaption>Koncept — kampanjstruktur</figcaption>
+            <button type="button" class="case-btn open-case">Visa konceptet</button>
+            <div class="case-copy" hidden>
+              <h3>Kampanjstruktur</h3>
+              <p><strong>Behov.</strong> Ordna en kampanj utan att lova en försäljningsvolym.</p>
+              <p><strong>Designval.</strong> Fyra möjliga vägar: Facebook, Instagram, TikTok och Google, med uppföljning.</p>
+              <p><strong>Tänkta funktioner.</strong> Målgrupper, annonser, retargeting, läsa datan.</p>
+              <p><strong>Förväntat värde.</strong> En metod för justering. Ingen resultatsiffra visas.</p>
+            </div>
+          </figure>
+        </div><figcaption>Koncept — presentationssida</figcaption></figure>
           <figure data-kind="social"><div class="shot feed"></div><figcaption>Koncept — inläggsserie</figcaption></figure>
           <figure data-kind="ads"><div class="shot ads"></div><figcaption>Koncept — kampanjstruktur</figcaption></figure>
         </div>
@@ -245,6 +282,7 @@
           <li>Stöd under hela projektet</li>
           <li>Fortlöpande förbättring, utan löfte om resultat</li>
         </ul>
+        <p class="note">Arbetet vänder sig till företag, butiker, entreprenörer och organisationer som vill strukturera sin närvaro på nätet.</p>
       </div>
     </section>
 
@@ -332,6 +370,10 @@
       <p>© <span class="year"></span> Vendorax Digital. Alla rättigheter förbehållna.</p>
     </div>
   </footer>
+  <dialog class="case" id="case" aria-labelledby="case-title">
+    <div class="case-slot"></div>
+    <button type="button" class="btn case-close">Stäng</button>
+  </dialog>
   <script src="../assets/site.js"></script>
 </body>
 </html>

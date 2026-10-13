@@ -69,3 +69,28 @@ form.addEventListener("submit", (event) => {
 document.querySelectorAll(".year").forEach((el) => {
   el.textContent = String(new Date().getFullYear());
 });
+
+document.querySelectorAll("[data-service]").forEach((link) => {
+  link.addEventListener("click", () => {
+    const select = document.querySelector('select[name="service"]');
+    if (!select) return;
+    const wanted = link.dataset.service;
+    for (const option of select.options) {
+      if (option.textContent.trim() === wanted) select.value = option.value;
+    }
+  });
+});
+
+const caseDialog = document.getElementById("case");
+if (caseDialog) {
+  document.querySelectorAll(".open-case").forEach((button) => {
+    button.addEventListener("click", () => {
+      const copy = button.parentElement.querySelector(".case-copy");
+      caseDialog.querySelector(".case-slot").replaceChildren(...copy.cloneNode(true).childNodes);
+      const heading = caseDialog.querySelector("h3");
+      if (heading) heading.id = "case-title";
+      caseDialog.showModal();
+    });
+  });
+  caseDialog.querySelector(".case-close").addEventListener("click", () => caseDialog.close());
+}

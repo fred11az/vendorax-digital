@@ -17,6 +17,7 @@
   <link rel="alternate" hreflang="es" href="https://vendoraxdigital.com/es/">
   <link rel="alternate" hreflang="x-default" href="https://vendoraxdigital.com/en/">
   <link rel="icon" href="../assets/logo.png">
+  <meta property="og:image" content="https://vendoraxdigital.com/assets/logo.png">
   <meta property="og:title" content="Vendorax Digital | Lo digital al servicio de su crecimiento">
   <meta property="og:description" content="Sitios web, comunicación digital, publicidad segmentada y oportunidades internacionales.">
   <meta property="og:type" content="website">
@@ -138,7 +139,7 @@
               <li>Landing pages orientadas a la conversión</li>
               <li>Rediseño, rendimiento, mantenimiento y SEO</li>
             </ul>
-            <a class="text-link" href="#contact">Saber más</a>
+            <a class="text-link" href="#contact" data-service="Desarrollo web">Saber más</a>
           </div>
         </div>
       </article>
@@ -155,7 +156,7 @@
               <li>Comunidad y respuestas</li>
               <li>Seguimiento y recomendaciones</li>
             </ul>
-            <a class="text-link" href="#contact">Saber más</a>
+            <a class="text-link" href="#contact" data-service="Community management">Saber más</a>
           </div>
           <div class="mock social" aria-hidden="true">
             <div class="post"></div>
@@ -178,7 +179,7 @@
           <ul class="inline">
             <li>Segmentación</li><li>Creación de anuncios</li><li>Contactos</li><li>Retargeting</li><li>Seguimiento de conversiones</li><li>Optimización continua</li>
           </ul>
-          <a class="text-link" href="#contact">Saber más</a>
+          <a class="text-link" href="#contact" data-service="Publicidad digital">Saber más</a>
         </div>
       </article>
 
@@ -194,7 +195,7 @@
               <li>Puesta en contacto</li>
               <li>Acompañamiento de los primeros intercambios</li>
             </ul>
-            <a class="text-link" href="#contact">Saber más</a>
+            <a class="text-link" href="#contact" data-service="Socios internacionales">Saber más</a>
           </div>
         </div>
       </article>
@@ -225,7 +226,43 @@
           <button type="button" data-filter="ads">Campañas</button>
         </div>
         <div class="gallery">
-          <figure data-kind="web"><div class="shot site"></div><figcaption>Concepto — página de presentación</figcaption></figure>
+          <figure data-kind="web">
+            <div class="shot site"></div>
+            <figcaption>Concepto — página de presentación</figcaption>
+            <button type="button" class="case-btn open-case">Ver el concepto</button>
+            <div class="case-copy" hidden>
+              <h3>Página de presentación</h3>
+              <p><strong>Necesidad.</strong> Una empresa necesita una página clara para presentar su oferta.</p>
+              <p><strong>Decisiones de diseño.</strong> Una página corta, una llamada visible, pensada primero para el móvil.</p>
+              <p><strong>Funciones previstas.</strong> Oferta, páginas de servicios, formulario.</p>
+              <p><strong>Valor esperado.</strong> El visitante entiende la oferta y puede escribir. Ningún resultado comercial está ligado a este concepto.</p>
+            </div>
+          </figure>
+          <figure data-kind="social">
+            <div class="shot feed"></div>
+            <figcaption>Concepto — serie de publicaciones</figcaption>
+            <button type="button" class="case-btn open-case">Ver el concepto</button>
+            <div class="case-copy" hidden>
+              <h3>Serie de publicaciones</h3>
+              <p><strong>Necesidad.</strong> Publicar con regularidad sin improvisar cada semana.</p>
+              <p><strong>Decisiones de diseño.</strong> Una serie de visuales coherentes y un calendario sencillo.</p>
+              <p><strong>Funciones previstas.</strong> Visuales, textos, ritmo de publicación.</p>
+              <p><strong>Valor esperado.</strong> Una presencia más legible. No es una cuenta real.</p>
+            </div>
+          </figure>
+          <figure data-kind="ads">
+            <div class="shot ads"></div>
+            <figcaption>Concepto — estructura de campaña</figcaption>
+            <button type="button" class="case-btn open-case">Ver el concepto</button>
+            <div class="case-copy" hidden>
+              <h3>Estructura de campaña</h3>
+              <p><strong>Necesidad.</strong> Ordenar una campaña sin prometer un volumen de ventas.</p>
+              <p><strong>Decisiones de diseño.</strong> Cuatro palancas posibles: Facebook, Instagram, TikTok y Google, con seguimiento.</p>
+              <p><strong>Funciones previstas.</strong> Audiencias, anuncios, retargeting, lectura de los datos.</p>
+              <p><strong>Valor esperado.</strong> Un método de ajuste. No se muestra ninguna cifra de rendimiento.</p>
+            </div>
+          </figure>
+        </div><figcaption>Concepto — página de presentación</figcaption></figure>
           <figure data-kind="social"><div class="shot feed"></div><figcaption>Concepto — serie de publicaciones</figcaption></figure>
           <figure data-kind="ads"><div class="shot ads"></div><figcaption>Concepto — estructura de campaña</figcaption></figure>
         </div>
@@ -245,6 +282,7 @@
           <li>Acompañamiento durante todo el proyecto</li>
           <li>Mejora continua, sin promesa de resultado</li>
         </ul>
+        <p class="note">El trabajo se dirige a empresas, comercios, emprendedores y organizaciones que quieren ordenar su presencia en línea.</p>
       </div>
     </section>
 
@@ -332,6 +370,10 @@
       <p>© <span class="year"></span> Vendorax Digital. Todos los derechos reservados.</p>
     </div>
   </footer>
+  <dialog class="case" id="case" aria-labelledby="case-title">
+    <div class="case-slot"></div>
+    <button type="button" class="btn case-close">Cerrar</button>
+  </dialog>
   <script src="../assets/site.js"></script>
 </body>
 </html>
